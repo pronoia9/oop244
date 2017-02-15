@@ -1,0 +1,12 @@
+1. Explain why templates should exist entirely in header files and NOT *.cpp files.
+Template is not a class, it's a class template. It's used to create a class (instantiates). 
+We'd need to define every possible form in a .cpp file if we dont implement in the header.
+
+2. Name different types of polymorphism and show an example for each of the types from this workshop.
+Universal Polymorphism - Parametric
+template <typename T>
+bool validate(T min, T max, T* arr, int size, bool* results)
+
+Ad-Hoc Polymorphism - Overloading
+bool validate(char min, char max, char* arr, int size, bool* results)
+bool validate(Car min, Car max, Car* arr, int size, bool* results)

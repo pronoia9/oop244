@@ -1,0 +1,12 @@
+1) What is meant by a safe empty state?
+a. What is the safe empty state in your program?
+Set empty state in my program sets the values for the object to predefined empty states (0 for ints, false for bool, \0 for string)
+
+b. Why did you select this state?
+I don't know what this question is asking precisely, it is quite vague. What I understood is: Why is the function resetting the variables to a predefined state, which is 0? 
+It's so that if one value is invalid, all the values are set to empty state.
+
+2) Describe a case where having multiple Enrollment constructors would simplify the code of clients that use it.
+For example, the constructor with no parameters initializes an Enrollment object with all private variables set to empty values. 
+It would be an efficient/fast way to just create objects without worrying about putting valid input, or rather any input at all.
+In another case we send in the parameters to initialize an object in a non-empty state, with the 2nd constructor with 5 parameters.

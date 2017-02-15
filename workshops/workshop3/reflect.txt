@@ -1,0 +1,9 @@
+1) What happens to dynamic memory if it is not deallocated?
+The memory will keep being occupied with data that can no longer be used.
+
+2) What are the two methods of formatting IO stream data?
+std::setprecision() 
+std::setw()
+
+3) Why was dynamic memory required in the main() function of w3_in_lab.cpp to build the solution?
+Cause we dont yet know the required size of the array beforehand, and we can't give a fixed size to something we don't know yet. The user input (n) decides the size. 

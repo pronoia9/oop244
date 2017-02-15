@@ -1,0 +1,9 @@
+Create a file called w1_at_home.txt and in your own words write the steps to create a simple console application in visual studio.
+"FOR OOP244"
+
+1. File -> New Project
+2. Create directory for solution & add to source control are UNCHECKED
+3. Templates -> Other Launguages -> Visual C++ -> Win32 -> Win32 Console Application
+4. Browse directories to choose where to save
+5. Name it
+6. In Application Wizard -> Application Settings -> Additional Options -> Empty Project + the last 1 options are unchecked

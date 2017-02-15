@@ -1,0 +1,29 @@
+﻿1- In a file called reflect.txt and using examples from your own code explain which features of object orientation you used.
+Object, Class, Abstraction, Encapsulation
+
+AccountNumber myNumber;  // object
+
+class AccountNumber  // class
+	{
+	private:  // abstraction
+		char _name[MAX_NAME_LENGTH + 1];  // encapsulation
+		int _bankCode;  // encapsulation
+		int _branchCode;  // encapsulation
+		int _accountNumber;  // encapsulation
+		bool _validAccNumber;  // encapsulation
+	
+	public:  // abstraction
+		void name(const char name[]);  // encapsulation
+		void accountNumber(int bankCode, int branchCode, int accountNumber);  // encapsulation
+		void display(bool display_name = true, bool display_number = true) const;  // encapsulation
+		bool isValid() const;  // encapsulation
+
+	private:  // abstraction
+		void displayName() const;  // encapsulation
+		void displayNumber() const;  // encapsulation
+	};
+
+
+
+	2- In the main function, there is no “if” statement for printing an error message when “isValid()” returns false and yet the error message is printed when account is not valid, explain why.
+Because the if statement(s) for printing an error message when "isValid()" returns false is in the AccountNumber.cpp, display function to be exact. display checks the value of isValid and then goes forward according to that.

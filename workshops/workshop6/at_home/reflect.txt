@@ -1,0 +1,20 @@
+1. Explain why if possible, we should avoid using friend helper functions.
+Granting friendship pierces encapsulation. Friendship should only be granted to 
+helper functions that needs to access and modify data. For functions that only 
+needs access to data, we can use query functions to get that specific data instead.
+
+2. Could the first helper operator+ (which accepts Accounts as left and right
+operands) implemented as a member operator? If yes, how?
+Yes, Account& operator + (const Account& other);
+
+3. In this line of your main function:
+A = B += C += 100.01;the under lined operator+= that accepts a double as right operand is never
+defined. Explain how is it, that the code compiles and runs correctly.
+It is the reverse of the += operand we defined " double operator += (double& num, const Account& acc); "
+Perhaps it recognizes the signature even if it is reversed.
+C += 100.01 :
+C= Checking: $100.99	->	C= Checking: $201.00
+B += 201.00 :
+B= Saving: $10101.98	->	B= Saving: $10302.98
+A = B :
+A= Saving: $10101.98	->	A= Saving: $10302.98

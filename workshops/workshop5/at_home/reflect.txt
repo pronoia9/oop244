@@ -1,0 +1,11 @@
+1. Explain how allocateAndCopy() function works in PhoneNumber.cpp
+> Check the validity of the parameters (a phone number). 
+If they are valid, it shallow copies the area and number, and it allocates memory and deletes the 
+current type to copy the new type.
+
+
+2. Explain why usually a copy constructor and assignment operator is needed when
+a class uses dynamic memory allocation to hold its resources.
+> Copy constructor and assignment operator ensures deep copying & deep assigning of resource data.
+The copying also does shallow copying of static memory data.
+In each deep copy, we allocate memory for resource and copy the contents into destination memory.
